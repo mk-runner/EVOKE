@@ -12,12 +12,12 @@ Two-view CXR is a variant of Multi-view CXR that includes only two views per stu
 
 ## Usage
     ```python
-   # obtain all studies of Multi-view CXR
+    # obtain all studies of Multi-view CXR
    import json
    path = 'multiview_cxr_annotation.json'
    multi_view_cxr_data = json.load(open(path))
 
-   # obtain all studies of Two-view CXR
+    # obtain all studies of Two-view CXR
    ann_data = json.load(open(path))
    two_view_cxr_data = {}
    for key, value in ann_data.items():
