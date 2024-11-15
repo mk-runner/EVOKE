@@ -38,7 +38,7 @@ Two-view CXR is a variant of Multi-view CXR that includes only two views per stu
 
 ## Citations
 
-If you use or extend our work, please cite our paper at commoning soon.
+If you use or extend our work, please cite our paper at **.
 
 ```
 
