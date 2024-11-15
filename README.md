@@ -10,6 +10,26 @@ Multi-view CXR aggregates studies with multiple views from both MIMIC-CXR [1] an
 ## Two-view CXR
 Two-view CXR is a variant of Multi-view CXR that includes only two views per study. The dataset can be downloaded in [huggingface 🤗](https://huggingface.co/datasets/MK-runner/Multi-view-CXR).
 
+## Usage
+    ```python
+   # obtain all studies of Multi-view CXR
+   import json
+   path = 'multiview_cxr_annotation.json'
+   multi_view_cxr_data = json.load(open(path))
+
+   # obtain all studies of Two-view CXR
+   ann_data = json.load(open(path))
+   two_view_cxr_data = {}
+   for key, value in ann_data.items():
+       two_view_cxr_data[key] = []
+       for item in ann_data:
+            ## current image_num
+            image_num = len(item['anchor_scan']['image_path']) + len(item['auxiliary_references']['image_path'])
+            if image_num != 2:
+                two_view_cxr_data[key].append(item)
+      
+    ```
+
 ## Statistics for the training, validation, and test sets across MIMIC-CXR, MIMIC-ABN, Multi-view CXR, and Two-view CXR.
 <div align=center><img src="results/data-statistics.png"></div>
 
