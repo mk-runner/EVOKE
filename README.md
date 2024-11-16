@@ -7,7 +7,7 @@ Radiology reports are crucial for planning treatment strategies and enhancing do
 - The paper is coming soon.
 
 ## Multi-view CXR
-Multi-view CXR aggregates studies with multiple views from both MIMIC-CXR [1] and IU X-ray ]2]. The dataset can be downloaded in [huggingface 🤗](https://huggingface.co/datasets/MK-runner/Multi-view-CXR).
+Multi-view CXR aggregates studies with multiple views from both MIMIC-CXR [1] and IU X-ray [2]. The dataset can be downloaded in [huggingface 🤗](https://huggingface.co/datasets/MK-runner/Multi-view-CXR).
 
 ## Two-view CXR
 Two-view CXR is a variant of Multi-view CXR that includes only two views per study. The dataset can be downloaded in [huggingface 🤗](https://huggingface.co/datasets/MK-runner/Multi-view-CXR).
