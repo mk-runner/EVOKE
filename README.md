@@ -38,11 +38,18 @@ Two-view CXR is a variant of Multi-view CXR that includes only two views per stu
 
 ## Citations
 
-If you use or extend our work, please cite our paper at **.
+If you use or extend our work, please cite our paper at arXiv.
 
 ```
-
-
+@misc{liu2024mclmultiviewenhancedcontrastive,
+      title={MCL: Multi-view Enhanced Contrastive Learning for Chest X-ray Report Generation}, 
+      author={Kang Liu and Zhuoqi Ma and Kun Xie and Zhicheng Jiao and Qiguang Miao},
+      year={2024},
+      eprint={2411.10224},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2411.10224}, 
+}
 ```
 
 ## Acknowledgement
