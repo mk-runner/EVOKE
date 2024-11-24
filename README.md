@@ -7,7 +7,24 @@ Radiology reports are crucial for planning treatment strategies and enhancing do
 - The code, checkpoints, and generated radiology reports are coming soon.
 
 ## Multi-view CXR
-Multi-view CXR aggregates studies with multiple views from both MIMIC-CXR [1] and IU X-ray [2]. The dataset can be downloaded in [huggingface 🤗](https://huggingface.co/datasets/MK-runner/Multi-view-CXR).
+Multi-view CXR aggregates studies with multiple views from both MIMIC-CXR [1] and IU X-ray [2]. 
+
+- Regarding radiographs, they can be obtained from [physionet](https://physionet.org/content/mimic-cxr-jpg/2.1.0/) and [NIH](https://openi.nlm.nih.gov/faq#collection). The file structure for storing these images can be represented as:
+
+files/
+├── p10
+├── p11
+├── p12
+├── p13
+├── p14
+├── p15
+├── p16
+├── p17
+├── p18
+├── p19
+└── NLMCXR_png
+
+- As for radiology reports, they can be downloaded in [huggingface 🤗](https://huggingface.co/datasets/MK-runner/Multi-view-CXR).
 
 ## Two-view CXR
 Two-view CXR is a variant of Multi-view CXR that includes only two views per study. The dataset can be downloaded in [huggingface 🤗](https://huggingface.co/datasets/MK-runner/Multi-view-CXR).
