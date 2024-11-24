@@ -11,6 +11,7 @@ Multi-view CXR aggregates studies with multiple views from both MIMIC-CXR [1] an
 
 - Regarding radiographs, they can be obtained from [physionet](https://physionet.org/content/mimic-cxr-jpg/2.1.0/) and [NIH](https://openi.nlm.nih.gov/faq#collection). The file structure for storing these images can be represented as:
 
+```
 files/
 ├── p10
 ├── p11
@@ -23,7 +24,7 @@ files/
 ├── p18
 ├── p19
 └── NLMCXR_png
-
+```
 - As for radiology reports, they can be downloaded in [huggingface 🤗](https://huggingface.co/datasets/MK-runner/Multi-view-CXR).
 
 ## Two-view CXR
