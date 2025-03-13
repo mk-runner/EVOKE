@@ -7,14 +7,19 @@ Radiology reports are crucial for planning treatment strategies and facilitating
 ## Update
 - The code, checkpoints, and generated radiology reports are coming soon.
 
-## Multi-view CXR
-Multi-view CXR aggregates studies with multiple views from MIMIC-CXR [1] and IU X-ray [2]. 
-
-- Regarding radiographs, they can be obtained from [physionet](https://physionet.org/content/mimic-cxr-jpg/2.1.0/) and [NIH](https://openi.nlm.nih.gov/faq#collection). The file structure for storing these images can be represented as:
-
+## Datasets
+### Medical Images 
+- MIMIC-CXR and MIMIC-ABN are publicly accessible through [PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/), with data systematically organized under root directories labeled `p10` through `p19`, maintaining consistency with MIMIC-CXR's default configuration. 
+- IU X-ray dataset is publicly available at [NIH](https://openi.nlm.nih.gov/faq#collection), and its root directory is the `NLMCXR_png`.
+- Multi-view CXR and Two-View CXR datasets: the `NLMCXR_png` + MIMIC-CXR images. Multi-view CXR aggregates studies with multiple views from MIMIC-CXR [1] and IU X-ray [2]. Two-view CXR is a variant of Multi-view CXR that includes only two views per study.
+- The comprehensive file architecture for all datasets is structured as delineated below:
 ```
 files/
 ├── p10
+    └── p10000032
+            └── s50414267
+               ├── 02aa804e-bde0afdd-112c0b34-7bc16630-4e384014.jpg
+               └── 174413ec-4ec4c1f7-34ea26b7-c5f994f8-79ef1962.jpg
 ├── p11
 ├── p12
 ├── p13
@@ -25,13 +30,19 @@ files/
 ├── p18
 ├── p19
 └── NLMCXR_png
+   ├── CXR1_1_IM-0001-3001.png
+   ├── CXR1_1_IM-0001-4001.png
+   └── CXR2_IM-0652-1001.png
 ```
-- As for radiology reports, they can be downloaded in [huggingface 🤗](https://huggingface.co/datasets/MK-runner/Multi-view-CXR).
+### Raw Radiology Reports
+- MIMIC-CXR and MIMIC-ABN: [PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/).
+- IU X-ray: [NIH](https://openi.nlm.nih.gov/faq#collection)
 
-## Two-view CXR
-Two-view CXR is a variant of Multi-view CXR that includes only two views per study. The dataset can be downloaded in [huggingface 🤗](https://huggingface.co/datasets/MK-runner/Multi-view-CXR).
+### Reorganization of Raw Radiology Reports
+- To streamline usage, we have reorganized the raw radiology reports. The processed data for the Multi-view CXR and Two-view CXR can be accessed on [huggingface 🤗](https://huggingface.co/datasets/MK-runner/Multi-view-CXR) (PhysioNet authorization required).
 
-## Usage
+
+## Load Radiology Reports
     ```python
     # obtain all studies of Multi-view CXR
     import json
