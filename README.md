@@ -1,13 +1,13 @@
-# MCL
-[MCL: Multi-view Enhanced Contrastive Learning for Chest X-ray Report Generation](https://arxiv.org/abs/2411.10224)
+# EVOKE
+[EVOKE: Elevating Chest X-ray Report Generation via Multi-View Contrastive Learning and Patient-Specific Knowledge](https://arxiv.org/abs/2411.10224)
 
-Radiology reports are crucial for planning treatment strategies and enhancing doctor-patient communication, yet manually writing these reports is burdensome for radiologists. While automatic report generation offers a solution, existing methods often rely on single-view radiographs, limiting diagnostic accuracy. To address this problem, we propose MCL, a **M**ulti-view enhanced **C**ontrastive **L**earning method for chest X-ray report generation. Specifically, we first introduce multi-view enhanced contrastive learning for visual representation by maximizing the agreement between multi-view radiographs and their corresponding report. Subsequently, to fully exploit patient-specific indications (e.g., patient's symptoms) for report generation, we add a transitional ``bridge" for missing indications to reduce embedding space discrepancies caused by their presence or absence. Additionally, we construct Multi-view CXR and Two-view CXR datasets from public sources to support research on multi-view report generation. Our proposed MCL surpasses recent state-of-the-art methods across multiple datasets, achieving a 5.0%  $F_{1}$ RadGraph improvement on MIMIC-CXR, a 7.3% BLEU-1 improvement on MIMIC-ABN, a 3.1% BLEU-4 improvement on Multi-view CXR, and an 8.2% $F_{\text{1,mic-14}}$ CheXbert improvement on Two-view CXR.
+Radiology reports are crucial for planning treatment strategies and facilitating effective doctor-patient communication. However, the manual creation of these reports places a significant burden on radiologists. While automatic radiology report generation presents a promising solution, existing methods often rely on single-view radiographs, which constrain diagnostic accuracy. To address this challenge, we propose \textbf{EVOKE}, a novel chest X-ray report generation framework that incorporates multi-view contrastive learning and patient-specific knowledge. Specifically, we introduce a multi-view contrastive learning method that enhances visual representation by aligning multi-view radiographs with their corresponding report. After that, we present a knowledge-guided report generation module that integrates available patient-specific indications (e.g., symptom descriptions) to trigger the production of accurate and coherent radiology reports. To support research in multi-view report generation, we construct Multi-view CXR and Two-view CXR datasets using publicly available sources. Our proposed EVOKE surpasses recent state-of-the-art methods across multiple datasets, achieving a 2.9% $F_{1}$ RadGraph improvement on MIMIC-CXR, a 7.3% BLEU-1 improvement on MIMIC-ABN, a 3.1% BLEU-4 improvement on Multi-view CXR, and an 8.2% $F_{\text{1,mic-14}}$ CheXbert improvement on Two-view CXR.
 
 ## Update
 - The code, checkpoints, and generated radiology reports are coming soon.
 
 ## Multi-view CXR
-Multi-view CXR aggregates studies with multiple views from both MIMIC-CXR [1] and IU X-ray [2]. 
+Multi-view CXR aggregates studies with multiple views from MIMIC-CXR [1] and IU X-ray [2]. 
 
 - Regarding radiographs, they can be obtained from [physionet](https://physionet.org/content/mimic-cxr-jpg/2.1.0/) and [NIH](https://openi.nlm.nih.gov/faq#collection). The file structure for storing these images can be represented as:
 
@@ -59,10 +59,10 @@ Two-view CXR is a variant of Multi-view CXR that includes only two views per stu
 If you use or extend our work, please cite our paper at arXiv.
 
 ```
-@misc{liu2024mclmultiviewenhancedcontrastive,
-      title={MCL: Multi-view Enhanced Contrastive Learning for Chest X-ray Report Generation}, 
-      author={Kang Liu and Zhuoqi Ma and Kun Xie and Zhicheng Jiao and Qiguang Miao},
-      year={2024},
+@misc{miao2025evokeelevatingchestxray,
+      title={EVOKE: Elevating Chest X-ray Report Generation via Multi-View Contrastive Learning and Patient-Specific Knowledge}, 
+      author={Qiguang Miao and Kang Liu and Zhuoqi Ma and Yunan Li and Xiaolu Kang and Ruixuan Liu and Tianyi Liu and Kun Xie and Zhicheng Jiao},
+      year={2025},
       eprint={2411.10224},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
