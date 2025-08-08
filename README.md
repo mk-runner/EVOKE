@@ -1,18 +1,43 @@
-# EVOKE
-[EVOKE: Elevating Chest X-ray Report Generation via Multi-View Contrastive Learning and Patient-Specific Knowledge](https://arxiv.org/abs/2411.10224)
 
-Radiology reports are crucial for planning treatment strategies and facilitating effective doctor-patient communication. However, the manual creation of these reports places a significant burden on radiologists. While automatic radiology report generation presents a promising solution, existing methods often rely on single-view radiographs, which constrain diagnostic accuracy. To address this challenge, we propose \textbf{EVOKE}, a novel chest X-ray report generation framework that incorporates multi-view contrastive learning and patient-specific knowledge. Specifically, we introduce a multi-view contrastive learning method that enhances visual representation by aligning multi-view radiographs with their corresponding report. After that, we present a knowledge-guided report generation module that integrates available patient-specific indications (e.g., symptom descriptions) to trigger the production of accurate and coherent radiology reports. To support research in multi-view report generation, we construct Multi-view CXR and Two-view CXR datasets using publicly available sources. Our proposed EVOKE surpasses recent state-of-the-art methods across multiple datasets, achieving a 2.9% $F_{1}$ RadGraph improvement on MIMIC-CXR, a 7.3% BLEU-1 improvement on MIMIC-ABN, a 3.1% BLEU-4 improvement on Multi-view CXR, and an 8.2% $F_{\text{1,mic-14}}$ CheXbert improvement on Two-view CXR.
-<div align=center><img src="results/figure2.png"></div>
+<div align="center">
 
-## Update
-- The code, checkpoints, and generated radiology reports are coming soon.
+# 🚀 EVOKE: Elevating Chest X-ray Report Generation via Multi-View Contrastive Learning and Patient-Specific Knowledge
 
-## Datasets
-### Medical Images 
-- MIMIC-CXR and MIMIC-ABN are publicly accessible through [PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/), with data systematically organized under root directories labeled `p10` through `p19`, maintaining consistency with MIMIC-CXR's default configuration. 
-- IU X-ray dataset is publicly available at [NIH](https://openi.nlm.nih.gov/faq#collection), and its root directory is the `NLMCXR_png`.
-- Multi-view CXR and Two-View CXR datasets: the `NLMCXR_png` + MIMIC-CXR images. Multi-view CXR aggregates studies with multiple views from MIMIC-CXR [1] and IU X-ray [2]. Two-view CXR is a variant of Multi-view CXR that includes only two views per study.
-- The comprehensive file architecture for all datasets is structured as delineated below:
+[![📄 arXiv](https://img.shields.io/badge/arXiv-2411.10224-b31b1b.svg)](https://arxiv.org/abs/2411.10224)
+[![🤗 Dataset on HuggingFace](https://img.shields.io/badge/Dataset-HuggingFace-yellow.svg)](https://huggingface.co/datasets/MK-runner/Multi-view-CXR)
+[![🪣 Checkpoints](https://img.shields.io/badge/Checkpoints-HuggingFace-green.svg)](https://huggingface.co/datasets/MK-runner/Multi-view-CXR/tree/main/checkpoints)
+[![🪣 Generated Reports](https://img.shields.io/badge/Generated%20Reports-Github-green.svg)](https://github.com/mk-runner/EVOKE/tree/main/generated_reports/MIMIC-CXR)
+
+<div align="center">
+  <img src="results/figure2.png" alt="Framework" width="75%">
+</div>
+
+</div>
+
+---
+## 📅 Update
+- 🛠 **2025-08-08:** **Code**, **checkpoints**, and **generated reports** are released.
+
+---
+## 📦 Checkpoints and Generated Reports
+
+| Method        | Checkpoint                                                                                                                                | Generated Reports                                                                                                         |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **EVOKE-224** | [HuggingFace](https://huggingface.co/datasets/MK-runner/Multi-view-CXR/blob/main/checkpoints/MIMIC-CXR/resolution-224x224/model_best.pth) | [GitHub](https://github.com/mk-runner/EVOKE/blob/main/generated_reports/MIMIC-CXR/resolution-224x224/test_prediction.csv) |
+| **EVOKE-384** | [HuggingFace](https://huggingface.co/datasets/MK-runner/Multi-view-CXR/blob/main/checkpoints/MIMIC-CXR/resolution-384x384/model_best.pth) | [GitHub](https://github.com/mk-runner/EVOKE/blob/main/generated_reports/MIMIC-CXR/resolution-384x384/test_prediction.csv) |
+
+---
+
+## 📂 Datasets
+### 🖼 Medical Images
+| Dataset | Source | Notes |
+|---------|--------|-------|
+| **MIMIC-CXR**, **MIMIC-ABN** | [PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/) | Public, organized under `p10`-`p19` |
+| **IU X-ray** | [NIH Open-i](https://openi.nlm.nih.gov/faq#collection) | Root dir: `NLMCXR_png` |
+| **Multi-view CXR** | `NLMCXR_png` + MIMIC-CXR | Studies with multiple views |
+| **Two-view CXR** | Subset of Multi-view CXR | Only two views per study |
+
+The folder structure for all datasets is as follows:
 ```
 files/
 ├── p10
@@ -34,15 +59,16 @@ files/
    ├── CXR1_1_IM-0001-4001.png
    └── CXR2_IM-0652-1001.png
 ```
-### Raw Radiology Reports
-- MIMIC-CXR and MIMIC-ABN: [PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/).
-- IU X-ray: [NIH](https://openi.nlm.nih.gov/faq#collection)
 
-### Reorganization of Raw Radiology Reports
-- To streamline usage, we have reorganized the raw radiology reports. The processed data for the Multi-view CXR and Two-view CXR can be accessed on [huggingface 🤗](https://huggingface.co/datasets/MK-runner/Multi-view-CXR) (PhysioNet authorization required).
+### 📝 Raw Radiology Reports
+- MIMIC-CXR & MIMIC-ABN: [PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/)  
+- IU X-ray: [NIH Open-i](https://openi.nlm.nih.gov/faq#collection)
 
+### 📝  Processed Reports
+Raw reports have been reorganized for easier use. Processed **Multi-view CXR** and **Two-view CXR** datasets are available on
+[🤗 HuggingFace](https://huggingface.co/datasets/MK-runner/Multi-view-CXR) (PhysioNet authorization required).
 
-## Load Radiology Reports
+## 💻 Load Radiology Reports
     ```python
     # obtain all studies of Multi-view CXR
     import json
@@ -62,13 +88,72 @@ files/
       
     ```
 
-## Statistics for the training, validation, and test sets across MIMIC-CXR, MIMIC-ABN, Multi-view CXR, and Two-view CXR.
-<div align=center><img src="results/data-statistics.png"></div>
+## 📊 Dataset Statistics
+<div align="center"> <img src="results/data-statistics.png" alt="Dataset Statistics" width="75%"> </div>
+
+---
+
+## 📊 Evaluation using generated radiology reports
+
+```python
+def compute_performance_using_generated_reports():
+    from tools.metrics.metrics import compute_all_scores
+    evoke_224 = 'generated-radiology-reports/MIMIC-CXR/test_reports_epoch-1_20-10-2024_16-28-28.csv'
+    evoke_384 = 'generated-radiology-reports/MIMIC-ABN/test_reports_epoch-1_23-10-2024_10-25-20.csv'
+    args = {
+        'chexbert_checkpoint': "/home/miao/data/dataset/checkpoints/chexbert.pth",
+        'chexbert_model_checkpoint': "/home/miao/data/dataset/checkpoints/bert-base-uncased",
+        'chexbert_tokenizer_checkpoint': "/home/miao/data/dataset/checkpoints/bert-base-uncased",
+        'radgraph_checkpoint': "/home/miao/data/dataset/checkpoints/radgraph",
+    }
+    for generated_path in [evoke_224, evoke_384]:
+        data = pd.read_csv(generated_path)
+        gts, gens = data['labels'].tolist(), data['report'].tolist()
+        scores = compute_all_scores(gts, gens, args)
+        print(scores)
+```
+
+---
+
+## ⚙️ Requirements
+
+- `torch==2.1.2+cu118`
+- `transformers==4.23.1`
+- `torchvision==0.16.2+cu118`
+- `radgraph==0.09`
+
+## 🚀 Training
+
+### 1. Download Checkpoints for Model & Metrics
+- For CE metrics calculation: `chexbert.pth`, `radgraph`, and `bert-base-uncased`.
+- For model initialization: `resnet101` (image encoder), `microsoft/BiomedVLP-CXR-BERT-specialized` (text encoder), `distilbert/distilgpt2` (define text generator), and `cvt2distilgpt2` (initialize text generator).
 
 
-## Citations
+| **Chekpoint Name**                    | **Config Variable Name** | **Download Link**                                                                          |
+| :------------------------------- | :----------------- | :------------------------------------------------------------------------------------ |
+| chexbert.pth                     | chexbert_checkpoint in `config/finetune_config.yaml`    | [StanfordMedicine](https://stanfordmedicine.app.box.com/s/c3stck6w6dol3h36grdc97xoydzxd7w9)       |
+| bert-base-uncased                | chexbert_model_checkpoint, chexbert_tokenizer_checkpoint, and fusion_checkpoint in `config/finetune_config.yaml`         | [HuggingFace](https://huggingface.co/google-bert/bert-base-uncased)                   |
+| radgraph                         | radgraph_checkpoint in `config/finetune_config.yaml`     | [PhysioNet](https://physionet.org/content/radgraph/1\.0.0/)                           |
+| resnet101                        | resnet_checkpoint in `config/finetune_config.yaml`      | [HuggingFace](https://huggingface.co/allenai/scibertsscivocabuuncased)                |
+| scibert_scivocab_uncased         | text_checkpoint in `config/finetune_config.yaml`      | [HuggingFace](https://huggingface.co/allenai/scibertsscivocabuuncased)                |
 
-If you use or extend our work, please cite our paper at arXiv.
+
+### 2. Run Training & Inference Stages
+```bash
+
+# Stage 1: Multi-view Contrastive Learning
+bash run_cxr_pt_224.sh
+
+# Stage 2: Knowledge-guided Report Generation
+bash run_cxr_ft_224.sh
+
+# Inference for report generation
+bash run_cxr_test_224.sh
+```
+----
+
+## 📚 Citation
+If you use or extend this work, please cite:
 
 ```
 @misc{miao2025evokeelevatingchestxray,
@@ -81,14 +166,15 @@ If you use or extend our work, please cite our paper at arXiv.
       url={https://arxiv.org/abs/2411.10224}, 
 }
 ```
-
-## Acknowledgement
+---
+## 🙏 Acknowledgements
 
 - [R2Gen](https://github.com/zhjohnchan/R2Gen) Some codes are adapted based on R2Gen.
 - [R2GenCMN](https://github.com/zhjohnchan/R2GenCMN) Some codes are adapted based on R2GenCMN.
 - [MGCA](https://github.com/HKU-MedAI/MGCA) Some codes are adapted based on MGCA.
 
-## References
+---
+## 🔗 References
 [1] Johnson, Alistair EW, et al. "MIMIC-CXR-JPG, a large publicly available database of labeled chest radiographs." arXiv preprint arXiv:1901.07042 (2019).
 
 [2] Demner-Fushman, Dina, et al. "Preparing a collection of radiology examinations for distribution and retrieval." Journal of the American Medical Informatics Association 23.2 (2016): 304-310.
@@ -100,3 +186,5 @@ If you use or extend our work, please cite our paper at arXiv.
 [5] Chen, Zhihong, et al. "Cross-modal Memory Networks for Radiology Report Generation." Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers). 2021. 
 
 [6] Wang, Fuying, et al. "Multi-granularity cross-modal alignment for generalized medical visual representation learning." Advances in Neural Information Processing Systems 35 (2022): 33536-33549.
+
+---
