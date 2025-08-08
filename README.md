@@ -89,7 +89,7 @@ Raw reports have been reorganized for easier use. Processed **Multi-view CXR** a
     ```
 
 ## 📊 Dataset Statistics
-<div align="center"> <img src="results/data-statistics.png" alt="Dataset Statistics" width="75%"> </div>
+<div align="center"> <img src="results/dataset-statistics.png" alt="Dataset Statistics" width="75%"> </div>
 
 ---
 
