@@ -1,0 +1,100 @@
+# ========= metrics checkpoint config =====#
+#"bertscore_checkpoint": "/home/20031211471/Data/checkpoints/roberta-large"
+"bertscore_checkpoint": "/home/miao/data/dataset/checkpoints/distilbert-base-uncased"
+"chexbert_checkpoint": "/home/miao/data/dataset/checkpoints/chexbert.pth"
+"chexbert_model_checkpoint": "/home/miao/data/dataset/checkpoints/bert-base-uncased"
+"chexbert_tokenizer_checkpoint": "/home/miao/data/dataset/checkpoints/bert-base-uncased"
+"radgraph_checkpoint": "/home/miao/data/dataset/checkpoints/radgraph"
+
+#"radgraph_reward_level": 'partial'    # ["simple", "partial", "complete", "all"]
+
+
+# =========model config===========#
+# ====visual encoder config====#
+#"visual_encoder": 'resnet101'     # choices = [resnet101, ViT-B-32]
+"resnet_checkpoint": '/home/miao/data/dataset/checkpoints/resnet101-5d3b4d8f.pth'
+
+# ====language model config===#
+"text_checkpoint": '/home/miao/data/dataset/checkpoints/scibert_scivocab_uncased'
+
+# text encoder config
+"encoder_hidden_size": 768
+"encoder_num_hidden_layers": 6
+
+# text encoder and image encoder fusion module config
+"fusion_num_heads": 8
+"fusion_checkpoint": "/home/miao/data/dataset/checkpoints/bert-base-uncased"
+
+
+# text decoder (bert) config
+"decoder_hidden_size": 2048
+"decoder_num_attention_heads": 8
+"decoder_num_hidden_layers": 3
+
+# text decoder (r2gen+cmn) config
+"num_heads": 8
+#"num_layers": 3
+"d_model": 512    # the dimension of Transformer.
+"d_ff": 512       # the dimension of FFN.
+"d_vf": 2048      # the dimension of the patch feature
+"dropout": 0.0
+"drop_prob_lm": 0.5
+"logit_layers": 1
+"use_bn": 0
+# Relational Memory (r2gen) config
+"rm_num_slots": 3
+"rm_num_heads": 8
+"rm_d_model": 512
+# report generation (r2gen) config
+"sample_method": "beam_search"
+"length_penalty": ""
+"diversity_lambda": 0.5
+"suppress_UNK": 0
+"temperature": 1.0     # for report generation
+"group_size": 1
+"sample_n": 1
+"output_logsoftmax": 1
+"decoding_constraint": 0
+"block_trigrams": 1
+
+# memory network (CMN) config
+"topk": 32        # the number of k for memory network
+"cmm_size": 2048  # the number of cmm size.
+"cmm_dim": 512    # the dimension of cmn
+
+# text decoder generate config
+"beam_size": 3
+
+# visual/language local embedding and global embedding
+"output_dim": 2048
+"proj_num_heads": 8
+
+# ===============loss config================#
+"instance_temp": 0.5   # the temperature parameter of instance-level contrastive learning
+"region_temp": 0.5     # the temperature parameter of region-level contrastive learning
+
+
+#===========trainer config===========#
+"seed": 9233
+"result_dir": "results"
+"save_period": 1
+"early_stop": 10
+"monitor_metric_curves": true
+"monitor_report": true
+"monitor_image": true
+
+"weight_decay": 1.0e-4
+"amsgrad": true
+"step_size": 10
+"gamma": 0.5
+# other config
+"n_gpu": 1
+# finetune config
+"ft_lr_monitor_metric": "F1-Radgraph-partial"
+"ft_monitor_mode": "max"
+"ft_monitor_metric": "F1-Radgraph-partial"
+
+# pretrain config
+"pt_monitor_mode": "min"
+"pt_monitor_metric": "all_loss"
+"pt_lr_monitor_metric": "all_loss"
