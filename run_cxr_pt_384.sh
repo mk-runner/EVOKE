@@ -9,9 +9,7 @@ python main_384.py \
 --epochs 50 \
 --pt_lr 5.0e-5 \
 --ft_lr 5.0e-5 \
---sk_type keywords \
---multiple_positives_contrastive supcon \
 --optim AdamW \
---is_save_checkpoint \
---is_multiview_learning \
+--is_save_checkpoint "yes" \
+--is_multiview_learning "yes" \
 --batch_size 32
