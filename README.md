@@ -134,7 +134,7 @@ def compute_performance_using_generated_reports():
 | chexbert.pth                     | chexbert_checkpoint in `config/finetune_config.yaml`    | [StanfordMedicine](https://stanfordmedicine.app.box.com/s/c3stck6w6dol3h36grdc97xoydzxd7w9)       |
 | bert-base-uncased                | chexbert_model_checkpoint, chexbert_tokenizer_checkpoint, and fusion_checkpoint in `config/finetune_config.yaml`         | [HuggingFace](https://huggingface.co/google-bert/bert-base-uncased)                   |
 | radgraph                         | radgraph_checkpoint in `config/finetune_config.yaml`     | [PhysioNet](https://physionet.org/content/radgraph/1\.0.0/)                           |
-| resnet101                        | resnet_checkpoint in `config/finetune_config.yaml`      | [HuggingFace](https://huggingface.co/allenai/scibertsscivocabuuncased)                |
+| resnet101                        | resnet_checkpoint in `config/finetune_config.yaml`      | [pytorch](https://download.pytorch.org/models/resnet101-5d3b4d8f.pth)                |
 | scibert_scivocab_uncased         | text_checkpoint in `config/finetune_config.yaml`      | [HuggingFace](https://huggingface.co/allenai/scibertsscivocabuuncased)                |
 
 
