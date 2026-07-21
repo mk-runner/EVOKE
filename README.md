@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# 🚀 EVOKE: Elevating Chest X-ray Report Generation via Multi-View Contrastive Learning and Patient-Specific Knowledge
+# 🚀 Patient-Specific Multimodal Learning with Multi-View Contrastive Alignment for Chest X-ray Report Generation
 
 [![📄 arXiv](https://img.shields.io/badge/arXiv-2411.10224-b31b1b.svg)](https://arxiv.org/abs/2411.10224)
 [![🤗 Dataset on HuggingFace](https://img.shields.io/badge/Dataset-HuggingFace-yellow.svg)](https://huggingface.co/datasets/MK-runner/Multi-view-CXR)
@@ -16,6 +16,7 @@
 
 ---
 ## 📅 Update
+- 🛠 **2026-07-20: **Accepted by Bioinformatics 2026**.
 - 🛠 **2025-08-08:** **Code**, **checkpoints**, and **generated reports** are released.
 
 ---
@@ -157,7 +158,7 @@ If you use or extend this work, please cite:
 
 ```
 @misc{miao2025evokeelevatingchestxray,
-      title={EVOKE: Elevating Chest X-ray Report Generation via Multi-View Contrastive Learning and Patient-Specific Knowledge}, 
+      title={Patient-Specific Multimodal Learning with Multi-View Contrastive Alignment for Chest X-ray Report Generation}, 
       author={Qiguang Miao and Kang Liu and Zhuoqi Ma and Yunan Li and Xiaolu Kang and Ruixuan Liu and Tianyi Liu and Kun Xie and Zhicheng Jiao},
       year={2025},
       eprint={2411.10224},
