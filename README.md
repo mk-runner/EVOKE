@@ -4,6 +4,7 @@
 # 🚀 Patient-Specific Multimodal Learning with Multi-View Contrastive Alignment for Chest X-ray Report Generation
 
 [![📄 arXiv](https://img.shields.io/badge/arXiv-2411.10224-b31b1b.svg)](https://arxiv.org/abs/2411.10224)
+[![📄 Bioinformatics](https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btag566/8744089?login=false)
 [![🤗 Dataset on HuggingFace](https://img.shields.io/badge/Dataset-HuggingFace-yellow.svg)](https://huggingface.co/datasets/MK-runner/Multi-view-CXR)
 [![🪣 Checkpoints](https://img.shields.io/badge/Checkpoints-HuggingFace-green.svg)](https://huggingface.co/datasets/MK-runner/Multi-view-CXR/tree/main/checkpoints)
 [![🪣 Generated Reports](https://img.shields.io/badge/Generated%20Reports-Github-green.svg)](https://github.com/mk-runner/EVOKE/tree/main/generated_reports/MIMIC-CXR)
@@ -157,15 +158,22 @@ bash run_cxr_test_224.sh
 If you use or extend this work, please cite:
 
 ```
-@misc{miao2025evokeelevatingchestxray,
-      title={Patient-Specific Multimodal Learning with Multi-View Contrastive Alignment for Chest X-ray Report Generation}, 
-      author={Qiguang Miao and Kang Liu and Zhuoqi Ma and Yunan Li and Xiaolu Kang and Ruixuan Liu and Tianyi Liu and Kun Xie and Zhicheng Jiao},
-      year={2025},
-      eprint={2411.10224},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2411.10224}, 
+@article{2026-bioinformatics-evoke,
+    author = {Miao, Qiguang and Liu, Kang and Ma, Zhuoqi and Li, Yunan and Kang, Xiaolu and Liu, Ruixuan and Liu, Tianyi and Xie, Kun},
+    title = {Patient-Specific Multimodal Learning with Multi-View Contrastive Alignment for Chest X-ray Report Generation},
+    journal = {Bioinformatics},
+    pages = {btag566},
+    year = {2026},
+    month = {07},
+    issn = {1367-4811},
+    doi = {10.1093/bioinformatics/btag566},
+    url = {https://doi.org/10.1093/bioinformatics/btag566},
+    eprint = {https://academic.oup.com/bioinformatics/advance-article-pdf/doi/10.1093/bioinformatics/btag566/70263843/btag566.pdf},
 }
+
+
+
+
 ```
 ---
 ## 🙏 Acknowledgements
