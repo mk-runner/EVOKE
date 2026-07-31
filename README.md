@@ -4,7 +4,7 @@
 # 🚀 Patient-Specific Multimodal Learning with Multi-View Contrastive Alignment for Chest X-ray Report Generation
 
 [![📄 arXiv](https://img.shields.io/badge/arXiv-2411.10224-b31b1b.svg)](https://arxiv.org/abs/2411.10224)
-[![📄 Bioinformatics](https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btag566/8744089?login=false)
+[![📄 Bioinformatics](https://img.shields.io/badge/Bioinformatics-10.1093%2Fbioinformatics%2Fbtag566-blue.svg)](https://academic.oup.com/bioinformatics/article/doi/10.1093/bioinformatics/btag566/8744089)
 [![🤗 Dataset on HuggingFace](https://img.shields.io/badge/Dataset-HuggingFace-yellow.svg)](https://huggingface.co/datasets/MK-runner/Multi-view-CXR)
 [![🪣 Checkpoints](https://img.shields.io/badge/Checkpoints-HuggingFace-green.svg)](https://huggingface.co/datasets/MK-runner/Multi-view-CXR/tree/main/checkpoints)
 [![🪣 Generated Reports](https://img.shields.io/badge/Generated%20Reports-Github-green.svg)](https://github.com/mk-runner/EVOKE/tree/main/generated_reports/MIMIC-CXR)
