@@ -160,20 +160,18 @@ If you use or extend this work, please cite:
 ```
 @article{2026-bioinformatics-evoke,
     author = {Miao, Qiguang and Liu, Kang and Ma, Zhuoqi and Li, Yunan and Kang, Xiaolu and Liu, Ruixuan and Liu, Tianyi and Xie, Kun},
-    title = {Patient-Specific Multimodal Learning with Multi-View Contrastive Alignment for Chest X-ray Report Generation},
+    title = {Patient-specific multimodal learning with multi-view contrastive alignment for chest X-ray report generation},
     journal = {Bioinformatics},
+    volume = {42},
+    number = {8},
     pages = {btag566},
     year = {2026},
-    month = {07},
+    month = {08},
     issn = {1367-4811},
     doi = {10.1093/bioinformatics/btag566},
     url = {https://doi.org/10.1093/bioinformatics/btag566},
-    eprint = {https://academic.oup.com/bioinformatics/advance-article-pdf/doi/10.1093/bioinformatics/btag566/70263843/btag566.pdf},
+    eprint = {https://academic.oup.com/bioinformatics/article-pdf/42/8/btag566/70263843/btag566.pdf},
 }
-
-
-
-
 ```
 ---
 ## 🙏 Acknowledgements
